@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   	fontSize: 20,
   },
   viewStyle: {
-  	backgroundColor: '#E6E6E6',
+  	backgroundColor: 'white',
   	justifyContent: 'center',
   	alignItems: 'center',
   	height: 60,
