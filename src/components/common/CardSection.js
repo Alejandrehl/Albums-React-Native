@@ -1,19 +1,14 @@
 import React, { Component } from 'react';
 import {
-  Text,
   View
 } from 'react-native';
-import axios from 'axios';
 
-export default class CardSection extends Component<{}> {
-
-  render() {
-    return (
-    	<View style={styles.containerStyle}>
-    		{this.props.children}
-    	</View>
-    );
-  }
+const CardSection = (props) => {
+	return (
+		<View style={styles.containerStyle}>
+			{props.children}
+		</View>
+	);
 };
 
 const styles = {
@@ -27,3 +22,5 @@ const styles = {
 		position: 'relative'
 	}
 }
+
+export { CardSection };

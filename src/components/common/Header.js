@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
-  StyleSheet,
   Text,
   View
 } from 'react-native';
 
-export default class Header extends Component<{}> {
-  render() {
-    return (
-      <View style={styles.viewStyle}>
-        <Text style={styles.textStyle}>{this.props.headerText}</Text>
-      </View>
-    );
-  }
+const Header = (props) => {
+  const { textStyle, viewStyle, } = styles;
+
+  return (
+    <View style={viewStyle}>
+      <Text style={textStyle}>{props.headerText}</Text>
+    </View>
+  );
 }
 
-const styles = StyleSheet.create({
+const styles = {
   textStyle: { 
   	fontSize: 20,
   },
@@ -34,4 +33,6 @@ const styles = StyleSheet.create({
   	elevation: 2,
   	position: 'relative',
   },
-});
+}
+
+export { Header };

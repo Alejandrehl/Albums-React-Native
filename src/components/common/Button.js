@@ -1,26 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
-  View,
   Text,
   TouchableOpacity,
-  Linking
 } from 'react-native';
 
-export default class Button extends Component<{}> {
-
-  render() {
-    return (
-      <TouchableOpacity 
-          style={styles.buttonStyle}
-          onPress={this.props.onPress}
-          >
-        <Text style={styles.textStyle}>
-          {this.props.children}
-        </Text>
-      </TouchableOpacity>
-    );
-  }
-
+const Button = ({ onPress, children }) => {
+  const { buttonStyle, textStyle } = styles;
+  return (
+    <TouchableOpacity 
+        style={buttonStyle}
+        onPress={onPress}
+        >
+      <Text style={textStyle}>
+        {children}
+      </Text>
+    </TouchableOpacity>
+  );
 };
 
 const styles = {
@@ -43,3 +38,5 @@ const styles = {
     paddingBottom: 10
   }
 }
+
+export { Button };

@@ -1,21 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
-  Text,
   View
 } from 'react-native';
-import axios from 'axios';
-import CardSection from './CardSection';
 
-export default class Card extends Component<{}> {
-
-  render() {
-    return (
-      <View style={styles.containerStyle}>
-      	{this.props.children}
-      </View>
-    );
-  }
-
+const Card = (props) => {
+	return (
+		<View style={styles.containerStyle}>
+			{props.children}
+		</View>
+	);
 };
 
 const styles = {
@@ -37,3 +30,5 @@ const styles = {
 		marginTop: 10,
 	}
 }
+
+export { Card };
